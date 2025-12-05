@@ -1,0 +1,8 @@
+<!-- assets/logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="48" viewBox="0 0 320 96">
+  <rect width="320" height="96" rx="12" fill="#1B3C53"></rect>
+  <g transform="translate(18,16)" fill="#F9F3EF" font-family="Segoe UI, Roboto, Arial" font-weight="700">
+    <text x="0" y="28" font-size="28">Pengaduan</text>
+    <text x="0" y="56" font-size="18" fill="#D2C1B6">Mahasiswa</text>
+  </g>
+</svg>
