@@ -25,7 +25,7 @@
       @endif
       
       <div class="illust">
-        <img src="{{ asset('build/assets/illustration.svg') }}" alt="ilustrasi" style="width:100%; max-width:420px; display:block"/>
+        <img src="{{ asset('build/assets/illustration.svg') }}" alt="ilustrasi" style="width:75%; max-width:420px; display:block"/>
       </div>
     </div>
 
