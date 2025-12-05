@@ -71,6 +71,8 @@ class AdminDashboardController extends Controller
                 $pesan .= "Terima kasih.";
               $response = Http::withHeaders([
                   'Authorization' => env('WHATSAPP_TOKEN') // <-- Kirim sebagai Header
+              ])->withOptions([
+                  'verify' => false // Disable SSL verification to fix certificate error
               ])->post('https://api.fonnte.com/send', [
                   'target' => $nomorTujuan,
                   'message' => $pesan
