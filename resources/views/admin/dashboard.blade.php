@@ -3,10 +3,24 @@
         Dashboard Admin
     </x-slot>
 
-    <section class="header-hero">
-        <div>
-            <h1 id="welcome-name">Halo, {{ Auth::user()->name }} 👋</h1>
-            <p class="text-muted" style="margin-top:6px">Tinjau, kelola, dan tanggapi pengaduan yang masuk.</p>
+    <section class="header-hero" style="background-color: #f9f3ef; padding: 30px; border-radius: 16px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="card-admin">
+            <h1 id="welcome-name" style="font-size: 28px; font-weight: 700; color: #456882; margin: 0;">Halo, {{ Auth::user()->name }} 👋</h1>
+            <p class="text-muted" style="margin: 8px 0 0 0; color: #495057; font-size: 16px; font-weight: 500;">Tinjau, kelola, dan tanggapi pengaduan yang masuk.</p>
+            <div style="display: flex; align-items: center; gap: 24px; margin-top: 24px; flex-wrap: wrap;">
+                <div style="background: white; padding: 20px 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 6px solid #456882; min-width: 180px;">
+                    <div style="font-size: 16px; color: #6c757d; font-weight: 500;">Pengaduan Aktif</div>
+                    <div style="font-size: 32px; font-weight: 700; color: #456882; margin-top: 6px;">{{ $pengaduanAktif->count() }}</div>
+                </div>
+                <div style="background: white; padding: 20px 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 6px solid #456882; min-width: 180px;">
+                    <div style="font-size: 16px; color: #6c757d; font-weight: 500;">Selesai</div>
+                    <div style="font-size: 32px; font-weight: 700; color: #456882; margin-top: 6px;">{{ $pengaduanSelesai->count() }}</div>
+                </div>
+                <div style="background: white; padding: 20px 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 6px solid #456882; min-width: 180px;">
+                    <div style="font-size: 16px; color: #6c757d; font-weight: 500;">Total</div>
+                    <div style="font-size: 32px; font-weight: 700; color: #456882; margin-top: 6px;">{{ $pengaduanAktif->count() + $pengaduanSelesai->count() }}</div>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -557,3 +557,12 @@ input:focus, textarea:focus, select:focus {
   color: var(--muted); 
   margin-top: 0.625rem; 
 }
+
+.card-admin{
+  width: 100%;
+  max-width: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf8 100%);
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(11, 20, 30, 0.05);
+}
